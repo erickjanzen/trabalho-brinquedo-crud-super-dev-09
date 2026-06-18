@@ -1,0 +1,131 @@
+:host {
+    display: block;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: sans-serif;
+  }
+  
+  label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    margin-top: 1.25rem;
+  }
+  
+  label:first-of-type {
+    margin-top: 0;
+  }
+  
+  /* Cor por campo */
+  label[for="modelo"]        { color: #185FA5; }
+  label[for="marca"]         { color: #993C1D; }
+  label[for="preco-unitario"]{ color: #3B6D11; }
+  label[for="quantidade"]    { color: #854F0B; }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 14px;
+    font-size: 14px;
+    color: #2c2c2a;
+    background: #ffffff;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  /* Bordas coloridas por campo */
+  input#modelo {
+    border: 2px solid #85B7EB;
+  }
+  input#modelo:focus {
+    border-color: #378ADD;
+    box-shadow: 0 0 0 3px #B5D4F4;
+  }
+  
+  select#marca {
+    border: 2px solid #F0997B;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23D85A30' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+  select#marca:focus {
+    border-color: #D85A30;
+    box-shadow: 0 0 0 3px #F5C4B3;
+  }
+  
+  input#preco-unitario {
+    border: 2px solid #97C459;
+  }
+  input#preco-unitario:focus {
+    border-color: #639922;
+    box-shadow: 0 0 0 3px #C0DD97;
+  }
+  
+  input#quantidade {
+    border: 2px solid #EF9F27;
+  }
+  input#quantidade:focus {
+    border-color: #BA7517;
+    box-shadow: 0 0 0 3px #FAC775;
+  }
+  
+  input::placeholder {
+    color: #B4B2A9;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  span {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-size: 15px;
+    font-weight: 500;
+    color: #26215C;
+    background: #EEEDFE;
+    border: 2px solid #AFA9EC;
+    border-radius: 10px;
+    padding: 8px 16px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    height: 44px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    background: #D4537E;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  
+  button:hover {
+    background: #993556;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
