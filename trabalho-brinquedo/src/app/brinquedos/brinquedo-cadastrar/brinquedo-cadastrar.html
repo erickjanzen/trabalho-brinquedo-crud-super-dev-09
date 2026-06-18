@@ -1,0 +1,25 @@
+<label for="modelo">Modelo(Nome)</label>
+<input type="text" [(ngModel)]="brinquedo().modelo"
+    id="modelo" placeholder="Digite o modelo ou nome do brinquedo">
+
+<label for="marca">Marca</label>
+<select id="marca">
+    <option selected disabled>Selecione uma categoria:</option>
+    <option value="Estrela">Estrela</option>
+    <option value="Matel">Matel</option>
+    <option value="Lego">Lego</option>
+</select>
+
+<label for="preco-unitario">Preço unitário</label>
+<input type="number" [(ngModel)]="brinquedo().preco" 
+id="preco-unitario" placeholder="Digite o preço unitário do brinquedo">
+
+<label for="quantidade">Quantidade</label>
+<input type="number" [(ngModel)]="brinquedo().quantidade"
+id="quantidade" placeholder="Digite a quantidade de brinquedos">
+
+@if(brinquedo().quantidade !== null && brinquedo().preco !== null){
+    <span>Total: R$ {{(brinquedo().quantidade! * brinquedo().preco!).toFixed(2).replace(".", ",")}}</span>
+}
+
+<button (click)="salvar()">Salvar</button>
