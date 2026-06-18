@@ -1,0 +1,22 @@
+<h1>Editar brinquedo</h1>
+
+<label for="modelo">Modelo</label>
+<input type="text" [(ngModel)]="brinquedo().modelo" id="modelo" placeholder="Digite o modelo do brinquedo">
+
+<label for="marca">Marca</label>
+<select [(ngModel)]="brinquedo().marca">
+    <option value="" disabled>Selecione a marca</option>
+    <option value="Mattel">Mattel</option>
+    <option value="Estrela">Estrela</option>
+    <option value="Lego">Lego</option>
+</select>
+
+<label for="quantidade">Quantidade</label>
+<input type="number" [(ngModel)]="brinquedo().quantidade" id="quantidade" placeholder="Coloque a quantidade">
+
+<label for="preco">Preço</label>
+<input type="number" [(ngModel)]="brinquedo().preco" id="preco" placeholder="Digite o valor unitário">
+
+<button (click)="salvar()">Salvar</button>
+
+<a routerLink="/brinquedos/listar">Lista de brinquedos</a>
